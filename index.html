@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Email List</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Emails -->
-    <div id="app">
+    <div id="app" v-cloak>
         <ul>
-            <li v-for="(email, index) in emails">{{ emails[index] }}</li>
+            <li v-show="emails.length === 10" v-for="(email, index) in emails">{{ emails[index] }}</li>
         </ul>
     </div>
     <!-- // Emails -->
